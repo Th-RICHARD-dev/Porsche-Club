@@ -1,0 +1,476 @@
+/* Section page d'arrivée */
+
+#landing .landing_video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+/* Section modèle de voitures */
+
+#model {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#model .model-presentation-1 {
+    position: absolute;
+    top: 100%;
+    color: var(--font-color);
+    margin: 15vh 0 30px 0;
+    padding: 0 50px;
+    font-size: large;
+    z-index: 500;
+}
+
+#model .model-presentation-2 {
+    position: absolute;
+    top: 100%;
+    color: var(--font-color);
+    margin: 25vh 0 30px 0;
+    padding: 0 50px;
+    font-size: large;
+    z-index: 500;
+}
+
+#model .model-presentation-3 {
+    text-decoration: underline;
+    position: absolute;
+    top: 100%;
+    color: var(--font-color);
+    margin: 35vh 0 0 0;
+    padding: 0 50px;
+    font-size: large;
+    z-index: 500;
+}
+
+#model .model_title {
+    position: absolute;
+    top: 100%;
+    color: var(--font-color);
+    margin: 50vh 0 30px 0;
+    z-index: 500;
+}
+
+#model .model_subtitle {
+    position: absolute;
+    top: 100%;
+    color: var(--font-color);
+    margin: 56vh 0 30px 0;
+    z-index: 500;
+}
+
+
+#model .model_base {
+    position: absolute;
+    height: 175vh;
+    width: 100%;
+    top: 100%;
+    background-color: var(--primary-main-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 30px;
+}
+
+#model .models {
+    height: 250px;
+    padding: 15px;
+    background-color: var(--secondary-main-color);
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: #00000050 0px 0px 15px;
+    transition: 0.5s ease;
+}
+
+#model .models:hover {
+    height: 250px;
+    padding: 20px;
+    background-color: var(--secondary-main-color);
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: #00000050 0px 0px 15px;
+}
+
+#model .models .info div {
+    display: flex;
+}
+
+#model .models .fa-arrow-up {
+    margin-left: 5px;
+    transition: 0.5s ease;
+}
+
+#model .models:hover .fa-arrow-up {
+    transform: rotate(90deg);
+    transition: 0.5s ease;
+}
+
+#model .models:nth-child(-n + 2) {
+    margin-top: 65vh;
+    margin-bottom: 0px;
+}
+
+#model .animation-container {
+    width: 80px;
+    height: 2px;
+}
+
+#model .hover-bar {
+    width: 10px;
+    height: 2px;
+    background-color: var(--detail-color);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#model .models:hover .hover-bar {
+    animation-name: bar-expand;
+    animation-timing-function: ease-in-out;
+}
+
+#model .model_base .model-1 {
+    background-image: url('images/porsche_model_1.png');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+#model .model_base .model-2 {
+    background-image: url('images/porsche_model_2.png');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+#model .model_base .model-3 {
+    background-image: url('images/porsche_model_3.png');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+#model .model_base .model-4 {
+    background-image: url('images/porsche_model_4.png');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+#model .model_base .model-1:hover {
+    transform: scale(1.025);
+}
+
+#model .model_base .model-2:hover {
+    transform: scale(1.025);
+}
+
+#model .model_base .model-3:hover {
+    transform: scale(1.025);
+}
+
+#model .model_base .model-4:hover {
+    transform: scale(1.025);
+}
+
+.info h3 {
+    color: var(--detail-color);
+}
+
+.fill {
+    height: 175vh;
+}
+
+/* Séparateur diagonal */
+
+.separator {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: var(--primary-main-color);
+}
+  
+.separator::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-main-color);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+  
+.separator::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-main-color);
+    clip-path: polygon(0 0, 0 101%, 100% 101%);
+}
+
+/* Section sports automobiles */
+
+#motorsport {
+    background-color: var(--secondary-main-color);
+    height: 175vh;
+}
+
+#motorsport .sport_title {
+    color: var(--detail-color);
+    text-transform: uppercase;
+    line-height: 60px;
+    font-size: 75px;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: var(--detail-color);
+    transform: translateY(-90px);
+    margin: 0 auto;
+    width: 50%;
+    transition: all 0.5s ease;
+}
+
+#motorsport .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#motorsport .gallery p {
+    font-size: 50px;
+}
+
+#motorsport .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 25px;
+}
+
+#motorsport .images {
+    height: 35vh;
+    background-color: #000;
+    border-radius: 25px;
+    box-shadow: #00000050 0px 0px 15px;
+    transition: 0.5s ease;
+}
+
+#motorsport .image-sport-1 {
+    background-image: url('images/porsche_motorsport_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-2 {
+    background-image: url('images/porsche_motorsport_2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-3 {
+    background-image: url('images/porsche_motorsport_3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-4 {
+    background-image: url('images/porsche_motorsport_4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-5 {
+    background-image: url('images/porsche_motorsport_5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-6 {
+    background-image: url('images/porsche_motorsport_6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-7 {
+    background-image: url('images/porsche_motorsport_7.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-8 {
+    background-image: url('images/porsche_motorsport_8.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#motorsport .image-sport-9 {
+    background-image: url('images/porsche_motorsport_9.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Séparateur diagonal */
+
+.separator-2 {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: var(--secondary-main-color);
+}
+  
+.separator-2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-main-color);
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+  
+.separator-2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-main-color);
+    clip-path: polygon(100% 0, 0 101%, 100% 101%);
+}
+
+/* Section événements */
+
+#events {
+    height: 100vh;
+    background-color: var(--primary-main-color);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+#events .events_title {
+    margin-top: 15px;
+    color: var(--font-color);
+}
+
+#events .events_description{
+    color: var(--font-color);
+}
+
+#events .calendar table {
+    margin-top: 50px;
+    width: 50vw;
+    border: 1px solid;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-color: var(--secondary-main-color);
+    border-radius: 15px;
+    color: var(--font-color);
+}
+
+#events .calendar td, #events .calendar th {
+    height: 50px;
+    border: 1px solid;
+    border-color: var(--secondary-main-color);
+    color: var(--font-color);
+}
+
+#events .calendar td {
+    width: 50%;
+    padding-left: 25px;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* Redimension texte en fonction de la taille de l'écran */
+
+@media screen and (max-width: 1200px){
+    #model .model-presentation-1, #model .model-presentation-2, #model .model-presentation-3 {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 715px){
+    #model .model-presentation-1, #model .model-presentation-2, #model .model-presentation-3 {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #model .model-presentation-1, #model .model-presentation-2, #model .model-presentation-3 {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 305px){
+    #model .model-presentation-1, #model .model-presentation-2, #model .model-presentation-3 {
+        font-size: 7.5px;
+    }
+}
+
+/* Ajuste la taille du titre de la section sports auto en fonction de la taille de l'écran */
+
+@media screen and (max-width: 450px) {
+    #motorsport .sport_title {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #motorsport .sport_title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #motorsport .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    #motorsport {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #motorsport .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    #motorsport {
+        height: auto;
+    }
+}
+
+@keyframes bar-expand {
+    0% {
+        width: 10px;
+    }
+    100% {
+        width: 80px;
+    }
+}

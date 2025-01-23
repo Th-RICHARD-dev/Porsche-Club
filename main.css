@@ -1,0 +1,241 @@
+/* Propriétées communes */
+
+@font-face {
+    font-family: 'porsche_title';
+    src: url('polices/porscheG.ttf');
+}
+
+@font-face {
+    font-family: 'porsche_regular';
+    src: url('polices/porscheP.ttf');
+}
+
+
+:root {
+    --primary-main-color: #f1f1f1;
+    --secondary-main-color: #020024;
+    --tertiary-main-color: #dedfe2;
+    --detail-color: #ff0000;
+    --font-color: #0c0c12;
+    --secondary-font-color: #81818c;
+}
+
+* {
+    font-family: porsche_regular, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    transition: 0.5s ease;
+    color: var(--primary-main-color);
+}
+
+body {
+    background-color: var(--primary-main-color);
+}
+
+a:hover {
+    color: var(--secondary-font-color);
+}
+
+#anchor {
+    border: 0;
+}
+
+/* Section barre de navigation */
+
+#navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: sticky;
+    background: rgba(0, 0, 35, 0.5);
+    background: linear-gradient(180deg, rgba(0, 0, 35, 0.5) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1000;
+}
+
+#navbar .flex {
+    margin-right: auto;
+    visibility: hidden;
+}
+
+
+#navbar .title {
+    text-align: center;
+    font-family: porsche_title, sans-serif;
+    color: var(--primary-main-color);
+}
+
+#navbar .title span {
+    text-align: center;
+    font-family: porsche_title, sans-serif;
+    color: var(--detail-color);
+}
+
+#navbar #menu_button {
+    position: absolute;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: 0.5s linear;
+}
+
+#navbar #menu_button.active {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: var(--secondary-main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+#navbar #menu.active a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#navbar #menu {
+    position: absolute;
+    top: 65px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.5s linear;
+}
+
+#navbar #menu.active {
+    position: absolute;
+    top: 65px;
+    visibility: visible;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--secondary-main-color);
+}
+
+        /* lorsque bouton de retour présent */
+
+#navbar .back {
+    margin-left: auto;
+    margin-right: 25px;
+    padding: 5px 10px;
+    background-color: var(--secondary-main-color);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+#navbar .back i {
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+#navbar .back:hover {
+    transform: scale(1.025);
+}
+
+/* Section pied de page */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+    background-color: var(--secondary-main-color);
+}
+
+.small-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer .small-footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+}
+
+#footer h2 {
+    font-family: porsche_title, sans-serif;
+    color: var(--secondary-font-color);
+}
+
+#footer a, #footer p {
+    color: var(--secondary-font-color);
+    margin-top: 15px;
+}
+
+/* boutton vers haut de page */
+
+#button_top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10000;
+    border: none;
+    outline: none;
+    background-color: var(--detail-color);
+    color: var(--primary-main-color);
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #00000050 0px 0px 15px;
+    transition: 0.5s ease;
+}
+ 
+#button_top:hover {
+    background-color: var(--primary-main-color);
+    color: var(--detail-color);
+    box-shadow: #00000070 0px 0px 15px;
+    transition: 0.5s ease;
+}
+
+#button_top:hover i {
+    color: var(--detail-color);
+}
+
+        /* Ajustement lorsque bouton de retour présent */
+
+@media screen and (max-width: 355px){
+    #navbar .back {
+        margin-left: 5%;
+    }
+}
+
+        /* Ajuste la taille de la police du footer */
+
+@media screen and (max-width: 550px) {
+    #footer .small-footer {
+        flex-direction: column;
+    }
+
+    #footer {
+        height: 100%;
+    }
+}
